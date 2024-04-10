@@ -1,0 +1,77 @@
+.App {
+  margin: 0;
+  display: grid;
+
+  grid-template-areas:
+    'h h'
+    'n c'
+    'f f';
+
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  /* grid-gap: 10px; */
+}
+
+.header {
+  grid-area: h;
+  padding: 11px;
+  background-color: #66acb8;
+}
+
+.logo img {
+  position: relative;
+  width: 50px;
+  height: auto;
+}
+
+.logo-text {
+  position: absolute;
+  top: 2.5%; /* Position the text at the vertical center */
+  left: 4.3%; /* Reset the left position */
+  right: 0; /* Reset the right position */
+  color: black;
+}
+
+.navigation {
+  grid-area: n;
+  padding: 20px;
+  background-color: #7acdd4;
+}
+
+.navigation a {
+  line-height: 2;
+}
+
+.settings {
+  padding-top: 20px;
+}
+
+.content {
+  grid-area: c;
+  background-color: #92dfe3;
+}
+
+.picture img {
+  width: 1070px;
+  height: auto;
+}
+
+.personal-information {
+  display: flex;
+}
+
+.ava img {
+  width: 150px;
+  height: auto;
+  padding: 10px;
+}
+
+.description p {
+  line-height: 0.5;
+}
+
+.footer {
+  grid-area: f;
+  background-color: #66acb8;
+  text-align: center;
+}
