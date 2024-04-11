@@ -1,0 +1,19 @@
+.nav {
+  grid-area: n;
+  padding: 14px;
+  background-color: #7acdd4;
+}
+
+.nav a {
+  line-height: 2;
+}
+
+.item {
+  color: black;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.settings {
+  padding-top: 20px;
+}

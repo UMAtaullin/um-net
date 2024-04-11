@@ -1,0 +1,19 @@
+.header {
+  grid-area: h;
+  padding: 11px;
+  background-color: #66acb8;
+}
+
+.logo img {
+  position: relative;
+  width: 50px;
+  height: auto;
+}
+
+.logo-text {
+  position: absolute;
+  top: 2.6%; /* Position the text at the vertical center */
+  left: 4.6%; /* Reset the left position */
+  right: 0; /* Reset the right position */
+  color: black;
+}
