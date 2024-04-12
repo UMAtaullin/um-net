@@ -16,7 +16,7 @@ const Navbar = () => {
 			<div className={cls.item}>
 				<a href='#'>Music</a>
 			</div>
-			<div className='settings'>
+			<div className={cls.item}>
 				<a>Settings</a>
 			</div>
 		</nav>

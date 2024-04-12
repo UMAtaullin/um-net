@@ -1,6 +1,6 @@
 .nav {
   grid-area: n;
-  padding: 14px;
+  padding: 16px;
   background-color: #7acdd4;
 }
 
@@ -10,10 +10,6 @@
 
 .item {
   color: black;
-  font-size: 11px;
+  font-size: 14px;
   text-decoration: none;
-}
-
-.settings {
-  padding-top: 20px;
 }

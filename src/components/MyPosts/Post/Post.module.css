@@ -1,0 +1,9 @@
+.ava img {
+  width: 50px;
+  border-radius: 20px;
+}
+
+posts {
+  display: flex;
+  color: blue;
+}
