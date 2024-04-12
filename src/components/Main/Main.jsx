@@ -1,6 +1,7 @@
-import React from "react";
-import Profile from "./Profile";
+import React from "react"
+import Profile from "../Profile/Profile"
 import cls from './Main.module.css'
+import MyPosts from "../MyPosts/MyPosts"
 
 const Main = () => {
   return (
@@ -14,12 +15,7 @@ const Main = () => {
         </a>
       </div>
         <Profile/>
-      <div className="posts">
-        My posts
-        <div className={cls.item}>Post-1</div>
-        <div className={cls.item}>Post-2</div>
-        <div className={cls.item}>Post-3</div>
-      </div>
+      <MyPosts/>
     </main>
   )
 }
