@@ -4,7 +4,7 @@ import cls from './Post.module.css'
 
 const Post = (props) => {
   return (
-		<div>
+		<div className={cls.posts}>
 			<div className={cls.ava}>
 				<a href='#'>
 					<img
@@ -13,9 +13,11 @@ const Post = (props) => {
 					/>
 				</a>
 			</div>
-			<div className={cls.post}>
-        {props.message}
-      </div>
+			<div className={cls.message}>{props.message}</div>
+			<div className={cls.like}>
+				<span>like</span>
+				{props.like}
+			</div>
 		</div>
 	)
 }

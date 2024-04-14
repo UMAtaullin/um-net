@@ -13,7 +13,9 @@ const App = () => {
 
       <Navbar/>
 
-      <Main/>
+      <div className="App-content">
+        <Main/>
+      </div>
 
       <Footer/>
 
