@@ -8,6 +8,10 @@
   line-height: 2;
 }
 
+.nav a:focus {
+  color:green;
+}
+
 .item {
   color: black;
   font-size: 14px;
