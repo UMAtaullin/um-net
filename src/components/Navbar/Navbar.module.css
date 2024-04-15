@@ -1,19 +1,15 @@
 .nav {
   grid-area: n;
-  padding: 16px;
+  padding: 17px;
   background-color: #7acdd4;
 }
 
 .nav a {
   line-height: 2;
+  color: black;
+  text-decoration: none;
 }
 
 .nav a:focus {
   color:green;
-}
-
-.item {
-  color: black;
-  font-size: 14px;
-  text-decoration: none;
 }

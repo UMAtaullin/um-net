@@ -1,7 +1,7 @@
 .header {
   grid-area: h;
   padding: 11px;
-  background-color: #66acb8;
+  background-color: #23d1f0;
 }
 
 .logo img {
@@ -10,7 +10,7 @@
   height: auto;
 }
 
-.logo-text {
+.logo_text {
   position: absolute;
   top: 2.6%; /* Position the text at the vertical center */
   left: 4.6%; /* Reset the left position */
