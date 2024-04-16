@@ -3,6 +3,14 @@
   grid-template-columns: 1fr 10fr;
 }
 
+.dialogs a {
+  text-decoration: none;
+}
+
+.dialogs a:focus {
+  color:green;
+}
+
 .dialogs_item {
   display:flex;
   align-items: center;
