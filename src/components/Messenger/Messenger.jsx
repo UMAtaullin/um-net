@@ -2,7 +2,7 @@ import React from 'react'
 import cls from './Messenger.module.css'
 import { NavLink } from 'react-router-dom'
 
-const Dialogs = (props) => {
+const Dialogs = props => {
   return (
     <dev className={cls.dialogs_item}>
       <NavLink to={props.name.toLowerCase()}>
@@ -12,7 +12,7 @@ const Dialogs = (props) => {
   )
 }
 
-const Messages = (props) => {
+const Messages = props => {
   return (
     <dev className={cls.messages_item}>
       {props.message}
@@ -20,23 +20,35 @@ const Messages = (props) => {
   )
 }
 
+// ------- Start DataBase ------- //
+const DialogsData = [
+  { name: 'Farit' },
+  { name: 'Zemfira' },
+  { name: 'Ilnur' },
+  { name: 'Mansur' },
+  { name: 'Raushania' },
+]
+
+const MessagesData = [
+  { message: 'Let us go' },
+  { message: 'Cross th bridge.' },
+  { message: 'This is an affirmative sentence.' },
+  { message: 'Cross th bridge.' },
+  { message: 'You can also take the bus.' },
+]
+// ------- End DataBase ------- //
+
+let dialogsElements = DialogsData.map(el => <Dialogs name={el.name} />)
+let massagesElements = MessagesData.map(el => <Messages message={el.message} />)
 
 const Messenger = () => {
   return (
     <div className={cls.messenger_page}>
       <dev className={cls.dialogs}>
-        <Dialogs name='Farit' />
-        <Dialogs name='Zemfira' />
-        <Dialogs name='Ilnur' />
-        <Dialogs name='Mansur' />
-        <Dialogs name='Raushania' />
+        {dialogsElements}
       </dev>
       <dev className={cls.messages}>
-        <Messages message="Let's go" />
-        <Messages message='Cross th bridge.' />
-        <Messages message='This is an affirmative sentence.' />
-        <Messages message='Cross th bridge.' />
-        <Messages message='You can also take the bus.' />
+        {massagesElements}
       </dev>
     </div>
   )
