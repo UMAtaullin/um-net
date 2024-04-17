@@ -3,18 +3,14 @@ import './MyPosts.module.css'
 import cls from './MyPosts.module.css'
 import Post from './Post/Post'
 
-const PostsData = [
-  { message: 'Hi, it is me', like: 5 },
-  { message: 'Where have you been', like: 14 },
-]
 
-let postMessage = PostsData.map(el => <Post message={el.message} like={el.like} />)
 
-const Messages = (props) => {
-  return <div className={cls.posts}>{postMessage}</div>
-}
+const MyPosts = (props) => {
 
-const MyPosts = () => {
+  let postElements = props.postsData.map(el => (
+    <Post message={el.message} like={el.like} />
+  ))
+
   return (
     <div className={cls.header}>
       <div className='inf'>
@@ -24,8 +20,7 @@ const MyPosts = () => {
         </textarea>
         <button>Add</button>
         <button>Delete</button>
-
-        <Messages />
+        {postElements}
       </div>
     </div>
   )

@@ -7,7 +7,8 @@ import Profile from './components/Profile/Profile';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Messenger from './components/Messenger/Messenger';
 
-const App = () => {
+const App = (props) => {
+
   return (
     <BrowserRouter>
       <div className='App'>
@@ -17,8 +18,11 @@ const App = () => {
 
         <div className='App-content'>
           <Routes>
-            <Route path='/messages/' element={<Messenger/>} />
-            <Route path='/profile' element={<Profile/>} />
+            <Route path='/messages/' element={<Messenger />} />
+            <Route
+              path='/profile'
+              element={<Profile postsData={props.postsData} />}
+            />
           </Routes>
         </div>
 
