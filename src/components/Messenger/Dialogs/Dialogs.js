@@ -10,16 +10,6 @@ const Dialogs = (props) => {
   )
 }
 
-// ------- Start DataBase ------- //
-const DialogsData = [
-  { name: 'Farit' },
-  { name: 'Zemfira' },
-  { name: 'Ilnur' },
-  { name: 'Mansur' },
-  { name: 'Raushania' },
-]
-// ------- End DataBase ------- //
 
-let dialogsElements = DialogsData.map(el => <Dialogs name={el.name} />)
 
-export default dialogsElements
+export default Dialogs
