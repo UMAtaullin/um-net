@@ -1,11 +1,11 @@
 import React from 'react'
 import cls from './Messenger.module.css'
 import Dialogs from './Dialogs/Dialogs'
-import massagesElements from './Messages/Messages'
+import Messages from './Messages/Messages'
 
 
 const Messenger = () => {
-  // ------- Start DataBase ------- //
+
   const DialogsData = [
     { name: 'Farit' },
     { name: 'Zemfira' },
@@ -14,9 +14,17 @@ const Messenger = () => {
     { name: 'Raushania' },
   ]
 
-  // ------- End DataBase ------- //
+  const MessagesData = [
+    { message: 'Let us go' },
+    { message: 'Cross th bridge.' },
+    { message: 'This is an affirmative sentence.' },
+    { message: 'Cross th bridge.' },
+    { message: 'You can also take the bus.' },
+  ]
 
   let dialogsElements = DialogsData.map(el => <Dialogs name={el.name} />)
+  let massagesElements = MessagesData.map(el => <Messages message={el.message} />)
+
 
   return (
     <div className={cls.messenger_page}>
