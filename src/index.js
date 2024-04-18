@@ -9,5 +9,27 @@ let postsData = [
   { message: 'Where have you been', like: 14 },
 ]
 
+const dialogsData = [
+  { name: 'Farit' },
+  { name: 'Zemfira' },
+  { name: 'Ilnur' },
+  { name: 'Mansur' },
+  { name: 'Raushania' },
+]
+
+const messagesData = [
+  { message: 'Let us go' },
+  { message: 'Cross th bridge.' },
+  { message: 'This is an affirmative sentence.' },
+  { message: 'Cross th bridge.' },
+  { message: 'You can also take the bus.' },
+]
+
 const root = createRoot(document.getElementById('root'))
-root.render(<App postsData={postsData}/>)
+root.render(
+  <App
+    postsData={postsData}
+    dialogsData={dialogsData}
+    messagesData={messagesData}
+  />
+)

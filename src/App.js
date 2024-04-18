@@ -18,10 +18,15 @@ const App = (props) => {
 
         <div className='App-content'>
           <Routes>
-            <Route path='/messages/' element={<Messenger />} />
+            <Route path='/messages/'
+              element={<Messenger
+                messagesData={props.messagesData}
+                dialogsData={props.dialogsData} />}
+            />
             <Route
               path='/profile'
-              element={<Profile postsData={props.postsData} />}
+              element={<Profile
+                postsData={props.postsData} />}
             />
           </Routes>
         </div>
