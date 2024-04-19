@@ -1,5 +1,6 @@
 .footer {
   grid-area: f;
-  background-color: #66acb8;
+  background-color: #eae2e2;
   text-align: center;
+  /* border: 1px solid rgb(225, 212, 212); */
 }

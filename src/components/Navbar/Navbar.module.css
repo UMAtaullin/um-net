@@ -1,13 +1,18 @@
 .nav {
   grid-area: n;
   padding: 17px;
-  background-color: #7acdd4;
+  background-color: #f0f5f6;
 }
 
 .nav a {
-  line-height: 2;
+  line-height: 3;
   color: black;
   text-decoration: none;
+  padding: 15px;
+}
+
+.lastItem {
+  padding-top: 40px;
 }
 
 .nav a:focus {
