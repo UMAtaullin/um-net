@@ -1,12 +1,5 @@
-import React from 'react';
-import App from './App';
-import './index.css';
-import { createRoot } from 'react-dom/client';
-import state from './components/redux/state';
+import state from './components/redux/state'
+import { rerenderEntireTree } from './render'
 
-const root = createRoot(document.getElementById('root'))
-root.render(
-  <App
-    state={state}
-  />
-)
+
+rerenderEntireTree(state)

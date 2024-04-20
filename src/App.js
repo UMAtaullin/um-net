@@ -4,13 +4,12 @@ import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Profile from './components/Profile/Profile';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Messenger from './components/Messenger/Messenger';
 
 const App = (props) => {
-
+debugger
   return (
-    <BrowserRouter>
       <div className='App'>
         <Header />
 
@@ -25,14 +24,14 @@ const App = (props) => {
             <Route
               path='/profile'
               element={<Profile
-                state={props.state.profilePage} />}
+                state={props.state.profilePage}
+                addPost={props.addPost} />}
             />
           </Routes>
         </div>
 
         <Footer />
       </div>
-    </BrowserRouter>
   )
   }
 

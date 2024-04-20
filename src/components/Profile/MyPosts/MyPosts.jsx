@@ -3,22 +3,27 @@ import './MyPosts.module.css'
 import cls from './MyPosts.module.css'
 import Post from './Post/Post'
 
-
-
 const MyPosts = (props) => {
+debugger
+  let postElements = props.postsData.map(el => (<Post message={el.message} likes={el.likes} />))
 
-  let postElements = props.postsData.map(el => (
-    <Post message={el.message} like={el.like} />
-  ))
+  let newPostElement = React.createRef()
+
+  let addPosts = (props) => {
+    let text = newPostElement.current.value
+    props.addPost(text)
+    newPostElement.current.value = ''
+  }
 
   return (
     <div className={cls.header}>
-      <div className='inf'>
+      <div>
         My posts
-        <textarea name='' id='' cols='30' rows='1'>
-          Написать пост
+        <textarea ref={newPostElement}>
         </textarea>
-        <button>Add</button>
+        <button onClick={addPosts}>
+          Add
+        </button>
         <button>Delete</button>
         {postElements}
       </div>
