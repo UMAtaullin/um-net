@@ -8,7 +8,6 @@ import { Routes, Route } from 'react-router-dom';
 import Messenger from './components/Messenger/Messenger';
 
 const App = (props) => {
-debugger
   return (
       <div className='App'>
         <Header />
@@ -24,8 +23,10 @@ debugger
             <Route
               path='/profile'
               element={<Profile
-                state={props.state.profilePage}
-                addPost={props.addPost} />}
+                profilePage={props.state.profilePage}
+                addPost={props.addPost}
+                updateNewPostText={props.updateNewPostText}
+                />}
             />
           </Routes>
         </div>
