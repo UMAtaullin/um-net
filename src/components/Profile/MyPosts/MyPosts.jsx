@@ -9,10 +9,10 @@ debugger
 
   let newPostElement = React.createRef()
 
-  let addPosts = (props) => {
-    let text = newPostElement.current.value
-    props.addPost(text)
-    newPostElement.current.value = ''
+  let addPosts = () => {
+    let text = newPostElement.current.value;
+    props.addPost(text);
+    newPostElement.current.value = '';
   }
 
   return (
