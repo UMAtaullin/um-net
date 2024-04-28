@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer';
 import Profile from './components/Profile/Profile';
 import { Routes, Route } from 'react-router-dom';
 import Messenger from './components/Messenger/Messenger';
+import store from './components/redux/state';
 
 const App = (props) => {
   return (
@@ -18,7 +19,8 @@ const App = (props) => {
           <Routes>
             <Route path='/messages/'
               element={<Messenger
-                state={props.state.messengerPage} />}
+                store={props.store}
+                />}
             />
             <Route
               path='/profile'
