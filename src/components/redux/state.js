@@ -1,3 +1,7 @@
+import messengerReducer from "./messengerReducer"
+import profileReducer from "./profileReducer"
+import sidebarReducer from "./sidebarReducer"
+
 let store = {
   _state: {
     profilePage: {
@@ -39,28 +43,16 @@ let store = {
   },
   // Методы которые меняют на state.
   dispatch(action) {
-    // {type: 'ADD-POST}
-    if (action.type === 'ADD-POST') {
-      let newPost = {
-        message: this._state.profilePage.newPostText,
-        likes: 0,
-      }
-      this._state.profilePage.postsData.push(newPost)
-      this._state.profilePage.newPostText = ''
-      this._callSubscriber(this._state)
-    } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
-      this._state.profilePage.newPostText = action.newText
-      this._callSubscriber(this._state)
-    } else if (action.type === 'UPDATE_NEW_MESSAGE_BODY') {
-      this._state.messengerPage.newMessageBody = action.body
-      this._callSubscriber(this._state)
-    } else if (action.type === 'SEND_MESSAGE') {
-      let body = this._state.messengerPage.newMessageBody
-      this._state.messengerPage.newMessageBody = ''
-      this._state.messengerPage.messagesData.push({ message: body })
-      this._callSubscriber(this._state)
-    }
-  },
+
+    this._state.profilePage = profileReducer(this._state.profilePage,
+      action)
+    this._state.messengerPage = messengerReducer(this._state.messengerPage,
+      action)
+    this._state.sidebar = sidebarReducer(this._state.sidebar,
+      action)
+
+    this._callSubscriber(this._state);
+  }
 }
 
 export const addPostsAction = () => ({ type: 'ADD-POST' })
