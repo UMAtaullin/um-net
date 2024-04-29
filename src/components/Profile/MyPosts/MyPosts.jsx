@@ -2,7 +2,7 @@ import React from 'react'
 import './MyPosts.module.css'
 import cls from './MyPosts.module.css'
 import Post from './Post/Post'
-import { addPostsAction, onPostChangeAction } from '../../redux/state'
+import { addPostsAction, onPostChangeAction } from '../../redux/profileReducer'
 
 const MyPosts = (props) => {
   let postElements = props.postsData.map(el => (<Post message={el.message} likes={el.likes} />))

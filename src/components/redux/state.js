@@ -55,16 +55,6 @@ let store = {
   }
 }
 
-export const addPostsAction = () => ({ type: 'ADD-POST' })
-export const onPostChangeAction = (text) =>
-({ type: 'UPDATE-NEW-POST-TEXT', newText: text })
-
-export const sendMessageCreator = () => ({ type: 'SEND_MESSAGE' })
-export const updateNewMessageBodyCreator = body => ({
-  type: 'UPDATE_NEW_MESSAGE_BODY',
-  body: body,
-})
-
 export default store;
 
 window.store = store;

@@ -1,12 +1,22 @@
 const messengerReducer = (state, action) => {
-    if (action.type === 'UPDATE_NEW_MESSAGE_BODY') {
+  switch(action.type) {
+    case 'UPDATE_NEW_MESSAGE_BODY':
       state.newMessageBody = action.body
-    } else if (action.type === 'SEND_MESSAGE') {
+      return state
+    case 'SEND_MESSAGE':
       let body = state.newMessageBody
       state.newMessageBody = ''
       state.messagesData.push({ message: body })
-    }
-  return state;
+      return state
+    default:
+      return state
+  }
 }
+
+export const sendMessageCreator = () => ({ type: 'SEND_MESSAGE' })
+export const updateNewMessageBodyCreator = body => ({
+  type: 'UPDATE_NEW_MESSAGE_BODY',
+  body: body,
+})
 
 export default messengerReducer
