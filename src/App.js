@@ -6,9 +6,9 @@ import Footer from './components/Footer/Footer';
 import Profile from './components/Profile/Profile';
 import { Routes, Route } from 'react-router-dom';
 import Messenger from './components/Messenger/Messenger';
-import store from './components/redux/state';
 
 const App = (props) => {
+  debugger;
   return (
       <div className='App'>
         <Header />

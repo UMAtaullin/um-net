@@ -1,5 +1,23 @@
-const messengerReducer = (state, action) => {
-  switch(action.type) {
+let initialState = {
+  dialogsData: [
+    { name: 'Farit' },
+    { name: 'Zemfira' },
+    { name: 'Ilnur' },
+    { name: 'Mansur' },
+    { name: 'Raushania' },
+  ],
+  messagesData: [
+    { message: 'Let us go' },
+    { message: 'Cross th bridge.' },
+    { message: 'This is an affirmative sentence.' },
+    { message: 'Cross th bridge.' },
+    { message: 'You can also take the bus.' },
+  ],
+  newMessageBody: ''
+}
+
+const messengerReducer = (state = initialState, action) => {
+  switch (action.type) {
     case 'UPDATE_NEW_MESSAGE_BODY':
       state.newMessageBody = action.body
       return state
